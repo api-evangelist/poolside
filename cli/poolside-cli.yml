@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/cli/cli-reference
+description: >-
+  poolside ships a first-party Agent CLI, `pool`, for interactive terminal
+  sessions, one-shot automated tasks, and use as an Agent Client Protocol (ACP)
+  client for compatible editors and agent servers.
+binary: pool
+current_version: v1.0.8
+docs: https://docs.poolside.ai/cli/pool
+reference: https://docs.poolside.ai/cli/cli-reference
+install:
+  script:
+    macos_linux_curl: "curl -fsSL https://downloads.poolside.ai/pool/install.sh | sh"
+    macos_linux_wget: "wget -qO- https://downloads.poolside.ai/pool/install.sh | sh"
+    windows_powershell: "irm https://downloads.poolside.ai/pool/install.ps1 | iex"
+  platforms: [macOS, Linux, Windows (beta)]
+auth:
+  login: pool login
+  logout: pool logout
+  options: [Poolside deployment, Poolside Platform, OpenRouter, OpenAI-compatible provider]
+  ci_env: POOLSIDE_API_KEY
+commands:
+- name: pool
+  summary: Start an interactive agent session in the terminal (multi-turn).
+  docs: https://docs.poolside.ai/cli/interactive-mode
+- name: pool exec
+  summary: Run one-shot agent tasks in scripts, CI, and automated workflows.
+  docs: https://docs.poolside.ai/cli/automated-mode
+- name: pool login
+  summary: Choose an auth option and sign in.
+- name: pool logout
+  summary: Sign out / switch accounts.
+capabilities:
+- Interactive terminal agent sessions
+- Automated one-shot task execution (pool exec)
+- Agent Client Protocol (ACP) client for other agent servers and editors
+- Slash commands within interactive sessions
+- Personal MCP server invocation
+- Local sandboxes with filesystem and network controls
+- Skills and AGENTS.md instruction support
+troubleshooting: https://docs.poolside.ai/cli/troubleshooting

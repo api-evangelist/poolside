@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+                                                       ××××××                ××××××              ×××××
+                                                       ××××××                ××××××              ×××××
+                                                       ××××××                                    ×××××
+×××××××××××××××      ×××××××××××××      ××××××××××××   ××××××  ×××××××××××××  ×××××   ××××××××××××××××   ××××××××××××
+×××××××××××××××××  ××××××××××××××××   ×××××××××××××××× ×××××× ××××××××××××××  ××××× ×××××××××××××××××× ××××××××××××××××
+××××××     ×××××× ×××××××     ×××××× ××××××      ××××× ×××××× ××××            ××××× ××××××      ×××××× ×××××      ××××××
+××××         ×××× ×××××         ×××× ×××××        ×××× ×××××× ××××××××××××××× ××××× ××××         ××××× ×××××××××××××××××
+××××         ×××× ×××××         ×××× ×××××        ×××× ×××××× ××××××××××××××× ××××× ××××         ××××× ×××××××××××××××××
+×××××      ××××××  ××××××     ×××××× ××××××      ××××× ××××××           ××××× ××××× ××××××      ×××××× ××××××
+×××××××××××××××××  ××××××××××××××××   ×××××××××××××××× ×××××× ××××××××××××××× ×××××  ××××××××××××××××× ××××××××××××××××
+×××××××××××××××      ××××××××××××       ××××××××××××   ×××××× ××××××××××××××  ×××××   ××××××××××××××××   ××××××××××××××
+××××
+××××
+××××
+
+Contact: mailto:security@poolside.ai
+Expires: 2028-04-01T12:00:00.000Z
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/D19754AEEA9D4D1997E23173B3F565E8C00C8CFA
+Preferred-Languages: en, fr
+Canonical: https://poolside.ai/.well-known/security.txt
+Hiring: https://poolside.ai/careers
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQTRl1Su6p1NGZfiMXOz9WXowAyM+gUCaeDNTRsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwwLDMACgkQs/Vl6MAMjPr+RgEA6sGpb+BdEax++5uTKbwa
+t+ZyuQjoxwI3aUOyMkgFp0IBANJhoz8YxhX1P8NZZPkY3S6cwW6nw3Gitsk8dKP8
+F2sE
+=yhTR
+-----END PGP SIGNATURE-----

@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/api/overview
+description: >-
+  Cross-cutting standards poolside's inference API conforms to, derived from the
+  published API documentation.
+standards:
+- id: openai-chat-completions
+  conforms: true
+  evidence: >-
+    Docs state "Poolside provides an OpenAI-compatible API for model requests";
+    /v1/chat/completions and /v1/models match the OpenAI API surface and work
+    with the OpenAI SDK.
+- id: bearer-token-auth
+  conforms: true
+  evidence: Authorization Bearer <api-key> header.
+- id: sse-streaming
+  conforms: true
+  evidence: stream=true returns OpenAI-format server-sent event deltas.
+- id: json-schema-structured-output
+  conforms: true
+  evidence: response_format supports JSON schema constraints.
+- id: oauth2
+  conforms: false
+  evidence: Inference API is API-key based; no oauth2 flow documented.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use the OpenAI error envelope, not application/problem+json.
+- id: acp-agent-client-protocol
+  conforms: true
+  evidence: >-
+    The `pool` CLI acts as an Agent Client Protocol client and integrates
+    ACP-compatible editors (JetBrains, Neovim, Zed).
+- id: mcp
+  conforms: true
+  evidence: Agents can invoke personal MCP servers configured from the CLI.
+compliance_program:
+  trust_center: https://trust.poolside.ai/
+  detail: security/poolside-trust-center.yml
+  note: >-
+    A published Trust Center exists; specific named certifications could not be
+    verified programmatically, so no Compliance certification is asserted here.

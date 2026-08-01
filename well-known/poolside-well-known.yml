@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/* on poolside hosts
+hosts:
+- host: https://poolside.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: poolside-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://inference.poolside.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 405
+  - path: /.well-known/openid-configuration
+    status: 405
+  - path: /.well-known/oauth-authorization-server
+    status: 405
+  - path: /.well-known/api-catalog
+    status: 405
+  - path: /.well-known/ai-plugin.json
+    status: 405
+notes: >-
+  platform.poolside.ai returns HTTP 200 for every /.well-known/* path but the
+  body is the SPA index.html (identical 2468-byte shell for all paths), so those
+  are treated as not-present, not real discovery documents. Only the RFC 9116
+  security.txt at poolside.ai is a genuine well-known document.

@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: generated
+description: >-
+  Packaged Agent Skills for working with poolside's OpenAI-compatible inference
+  API, grounded in the two documented endpoints. poolside also natively supports
+  its own local Skills and AGENTS.md instruction format for its `pool` agent — see
+  provider_published below.
+skills:
+- file: poolside-chat-completion.md
+  name: Call a poolside Laguna model (OpenAI-compatible)
+  api: Poolside API (OpenAI-compatible)
+  operations: [GET /v1/models, POST /v1/chat/completions]
+provider_published:
+- name: AGENTS.md instructions
+  url: https://docs.poolside.ai/agent-instructions.md
+  note: >-
+    poolside's `pool` agent reads AGENTS.md across personal
+    (~/.config/poolside/AGENTS.md), project (repo root), and directory (nested)
+    scopes; precedence directory > project > personal.
+- name: Skills
+  url: https://docs.poolside.ai/skills.md
+  note: Local skills give the pool agent reusable, task-specific instructions and resources.

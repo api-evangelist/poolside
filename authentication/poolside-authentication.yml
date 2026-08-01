@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/api/overview
+docs: https://docs.poolside.ai/get-started/log-in
+description: >-
+  poolside's OpenAI-compatible inference API authenticates with a bearer API key.
+  Keys are issued by the hosted Poolside Platform (free developer access),
+  OpenRouter, or a self-managed Poolside deployment administrator. There is no
+  OAuth scope surface on the inference API; access is key-based.
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  header: Authorization
+  format: "Authorization: Bearer <api-key>"
+  sources: [https://docs.poolside.ai/api/overview]
+key_sources:
+- name: Poolside Platform
+  url: https://platform.poolside.ai
+  note: Sign in for a free developer API key.
+- name: OpenRouter
+  url: https://openrouter.ai/poolside
+  note: Use an existing OpenRouter API key against the OpenRouter base URL.
+- name: Poolside deployment
+  note: Self-managed on-prem / cloud deployment issues its own API tokens; login via the org sign-in system.
+ci_note: >-
+  For CI/CD and automated workflows the docs recommend supplying the key via the
+  POOLSIDE_API_KEY environment variable rather than stored CLI credentials.
+cli_auth:
+  command: pool login
+  logout: pool logout
+  options: [Poolside Platform, Poolside deployment, OpenRouter, OpenAI-compatible provider]

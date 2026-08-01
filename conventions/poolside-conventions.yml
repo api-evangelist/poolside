@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/api/openai-api-examples
+description: >-
+  Cross-cutting request/response conventions for poolside's inference API. The
+  API is OpenAI-compatible: the same request/response shapes and the OpenAI SDKs
+  work across the Poolside Platform, a Poolside deployment, and OpenRouter by
+  switching only the base URL and API key.
+base_url: https://inference.poolside.ai/v1
+alt_base_urls:
+  deployment: https://<api-domain>/openai/v1
+  openrouter: https://openrouter.ai/api/v1
+api_style: OpenAI-compatible REST over HTTPS, JSON request and response bodies
+authentication:
+  scheme: HTTP Bearer token (API key)
+  header: "Authorization: Bearer <api-key>"
+  detail: authentication/poolside-authentication.yml
+idempotency:
+  supported: false
+  note: >-
+    poolside's documented inference API (chat completions + model listing) does
+    not publish an idempotency-key contract. Chat-completion requests are not
+    idempotent by design; GET /v1/models is inherently idempotent.
+pagination:
+  supported: false
+  note: The two documented endpoints (models list, chat completions) are not paginated.
+request_parameters:
+  model: required — model identifier string, e.g. poolside/laguna-m.1
+  messages: required — array of {role, content} conversation messages
+  max_completion_tokens: optional — token generation limit
+  temperature: optional — sampling value 0-2
+  stream: optional — boolean, server-sent events (SSE) streaming
+  tools: optional — function/tool-call definitions
+  response_format: optional — JSON schema constraints for structured output
+  reasoning: optional — OpenRouter-style reasoning configuration
+response_shape:
+  fields: [id, model, created, choices, usage]
+  choices: array of {index, message{role, content}, finish_reason}
+  usage: {prompt_tokens, completion_tokens, total_tokens}
+streaming:
+  supported: true
+  mechanism: Server-Sent Events (set stream=true), OpenAI delta chunk format
+error_envelope:
+  shape: 'OpenAI-compatible — {"error": {"message", "type", "param", "code"}}'
+  detail: errors/poolside-problem-types.yml
+versioning:
+  scheme: uri-path (/v1) plus model-version identifiers (e.g. laguna-m.1, laguna-xs.2)
+  detail: lifecycle/poolside-lifecycle.yml

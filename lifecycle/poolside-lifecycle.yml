@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/release-notes/overview
+description: >-
+  Versioning, release, deprecation, and support posture for poolside's models and
+  inference platform.
+versioning:
+  api_scheme: uri-path (/v1, OpenAI-compatible)
+  model_scheme: named model versions (Laguna XS 2.1, Laguna M.1, Laguna XS.2, Malibu 2.x)
+  docs: https://docs.poolside.ai/get-started/supported-models
+release_notes:
+  models: https://docs.poolside.ai/release-notes/models
+  inference: https://docs.poolside.ai/release-notes/inference
+  overview: https://docs.poolside.ai/release-notes/overview
+deprecation:
+  policy: >-
+    Superseded models (e.g. Malibu 2.x replaced by the Laguna family) are tracked
+    in the model release notes; poolside publishes a certified on-premises stack
+    per bundle (e.g. "Certified stacks: July 2026") governing supported versions.
+  certified_stacks: https://docs.poolside.ai/deployment/on-prem/certified-stacks/overview
+support:
+  overview: https://docs.poolside.ai/support/overview
+  tiers: [Standard Support, Premium Support]
+  portal: https://docs.poolside.ai/support/support-portal
+  premium: https://docs.poolside.ai/support/premium-support
+  standard: https://docs.poolside.ai/support/standard-support
+status_page: null
+deprecated_operations: []

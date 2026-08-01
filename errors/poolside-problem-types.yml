@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  OpenAI-compatible API conventions (https://docs.poolside.ai/api/openai-api-examples);
+  poolside does not publish a dedicated error-code reference, so this catalog is
+  the standard OpenAI-compatible HTTP error surface the API returns.
+format: openai-error-envelope
+envelope:
+  shape: '{"error": {"message": "...", "type": "...", "param": null, "code": "..."}}'
+problems:
+- status: 400
+  type: invalid_request_error
+  title: Invalid request
+  remediation: Check request body — model id, messages array, and parameter ranges.
+- status: 401
+  type: authentication_error
+  title: Invalid or missing API key
+  remediation: Supply a valid Authorization Bearer key from Poolside Platform, OpenRouter, or your deployment.
+- status: 403
+  type: permission_error
+  title: Not authorized for this model or resource
+  remediation: Confirm the API key has access to the requested model.
+- status: 404
+  type: not_found_error
+  title: Model or resource not found
+  remediation: Verify the model identifier against GET /v1/models.
+- status: 429
+  type: rate_limit_error
+  title: Rate limit or quota exceeded
+  remediation: Back off and retry; reduce request rate or token volume.
+- status: 500
+  type: server_error
+  title: Internal server error
+  remediation: Retry with backoff; contact support if persistent.
+- status: 503
+  type: service_unavailable
+  title: Model temporarily unavailable
+  remediation: Retry with backoff; the inference backend may be scaling or loading a model.

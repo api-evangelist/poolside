@@ -1,0 +1,97 @@
+# Poolside
+
+> Official documentation for Poolside, including setup, CLI workflows, API usage, model deployment, and reference material.
+
+## Docs
+
+- [AGENTS.md instructions](https://docs.poolside.ai/agent-instructions.md): Set up instructions for Poolside across personal, project, and directory scopes.
+- [OpenAI-compatible API examples](https://docs.poolside.ai/api/openai-api-examples.md): Make OpenAI-compatible API requests to Poolside models.
+- [Poolside API](https://docs.poolside.ai/api/overview.md): Get started with the Poolside OpenAI-compatible API: base URLs, keys, and your first request.
+- [Automate tasks](https://docs.poolside.ai/cli/automated-mode.md): Use `pool exec` to run one-shot tasks in scripts, CI, and automated workflows.
+- [CLI reference](https://docs.poolside.ai/cli/cli-reference.md): Reference for current `pool` commands, flags, slash commands, and exit codes.
+- [Install Poolside Agent CLI](https://docs.poolside.ai/cli/install.md): Install `pool` and sign in.
+- [Work from the terminal](https://docs.poolside.ai/cli/interactive-mode.md): Use `pool` to work with a Poolside agent over multiple turns in the terminal.
+- [Use other agent servers](https://docs.poolside.ai/cli/other-agent-servers.md): Use `pool` as an Agent Client Protocol (ACP) client for another compatible agent server.
+- [Poolside Agent CLI](https://docs.poolside.ai/cli/pool.md): Use the `pool` command for interactive sessions, automated tasks, ACP editors, and other agent servers.
+- [Troubleshoot Poolside Agent CLI](https://docs.poolside.ai/cli/troubleshooting.md): Diagnose common Poolside Agent CLI authentication, configuration, and ACP issues.
+- [Configure Poolside](https://docs.poolside.ai/configure.md): Shape agent behavior and control what Poolside agents can access.
+- [Install on Amazon EKS](https://docs.poolside.ai/deployment/cloud/aws-eks/install.md): Deploy Poolside model inference on Amazon EKS with Helm, using IRSA for S3 access and an Application Load Balancer for ingress.
+- [Manage models on Amazon EKS](https://docs.poolside.ai/deployment/cloud/aws-eks/manage-models.md): Add, update, or remove inference models in an existing inference deployment on Amazon EKS.
+- [Amazon EKS deployment](https://docs.poolside.ai/deployment/cloud/aws-eks/overview.md): Overview of deploying Poolside model inference on Amazon EKS by using Helm, with IRSA for object storage and an ALB for ingress.
+- [Reference architecture](https://docs.poolside.ai/deployment/cloud/aws-eks/reference-architecture.md): AWS reference architecture for a Poolside model inference deployment on Amazon EKS, including the architecture diagram, the AWS layers the inference chart depends on, and the key design decisions.
+- [Remove from Amazon EKS](https://docs.poolside.ai/deployment/cloud/aws-eks/remove.md): Instructions for removing a model inference deployment from an Amazon EKS cluster.
+- [Upgrade on Amazon EKS](https://docs.poolside.ai/deployment/cloud/aws-eks/upgrade.md): Upgrade an existing model inference deployment on Amazon EKS to a new bundle.
+- [Install on OpenShift](https://docs.poolside.ai/deployment/cloud/openshift/install.md): Deploy Poolside model inference on OpenShift and serve models through an OpenAI-compatible API.
+- [Manage models on OpenShift](https://docs.poolside.ai/deployment/cloud/openshift/manage-models.md): Add, update, or remove inference models in an existing inference deployment on OpenShift.
+- [OpenShift deployment](https://docs.poolside.ai/deployment/cloud/openshift/overview.md): Overview of deploying Poolside model inference on Red Hat OpenShift by using Helm.
+- [Remove from OpenShift](https://docs.poolside.ai/deployment/cloud/openshift/remove.md): Instructions for removing a model inference deployment from Red Hat OpenShift.
+- [Upgrade on OpenShift](https://docs.poolside.ai/deployment/cloud/openshift/upgrade.md): Upgrade an existing model inference deployment on OpenShift to a new bundle.
+- [Cloud deployment](https://docs.poolside.ai/deployment/cloud/overview.md): Deploy Poolside model inference in a supported GPU-backed cloud Kubernetes environment.
+- [Set up offline documentation](https://docs.poolside.ai/deployment/cloud/set-up-offline-documentation.md): Deploy the Poolside documentation site in-cluster for offline access as part of a cloud inference deployment.
+- [Install on Kubernetes](https://docs.poolside.ai/deployment/cloud/upstream-kubernetes/install.md): Deploy Poolside model inference on a self-managed Kubernetes cluster and serve models through an OpenAI-compatible API.
+- [Manage models on Kubernetes](https://docs.poolside.ai/deployment/cloud/upstream-kubernetes/manage-models.md): Add, update, or remove inference models in an existing inference deployment on upstream Kubernetes.
+- [Upstream Kubernetes deployment](https://docs.poolside.ai/deployment/cloud/upstream-kubernetes/overview.md): Overview of deploying Poolside model inference on a self-managed Kubernetes cluster by using Helm.
+- [Remove from upstream Kubernetes](https://docs.poolside.ai/deployment/cloud/upstream-kubernetes/remove.md): Instructions for removing a model inference deployment from an upstream Kubernetes cluster.
+- [Upgrade on Kubernetes](https://docs.poolside.ai/deployment/cloud/upstream-kubernetes/upgrade.md): Upgrade an existing model inference deployment on upstream Kubernetes to a new bundle.
+- [Admin toolkit](https://docs.poolside.ai/deployment/on-prem/admin.md): Common commands and checks for operating a Poolside on-premises model inference deployment.
+- [Certified on-premises model inference stack: July 2026](https://docs.poolside.ai/deployment/on-prem/certified-stacks/july-2026.md): Certified software components and versions for the Poolside July 2026 on-premises model inference stack.
+- [Certified stacks](https://docs.poolside.ai/deployment/on-prem/certified-stacks/overview.md): Certified software stacks for supported Poolside on-premises model inference deployments.
+- [On-premises deployment FAQ](https://docs.poolside.ai/deployment/on-prem/faq.md): Answers to common questions about Poolside on-premises model inference deployments.
+- [Install on-premises](https://docs.poolside.ai/deployment/on-prem/install.md): Install Poolside model inference on a single on-premises GPU host by using the Terraform installation bundle.
+- [On-premises deployment](https://docs.poolside.ai/deployment/on-prem/overview.md): Overview of Poolside on-premises model inference deployments, including hardware options, architecture, installation approach, and operational considerations.
+- [Relocate an on-premises server](https://docs.poolside.ai/deployment/on-prem/relocation.md): Relocate a Poolside on-premises model inference server to a different physical network.
+- [Server and service maintenance](https://docs.poolside.ai/deployment/on-prem/server-maintenance.md): Stop, start, reboot, or fully shut down a Poolside on-premises model inference node.
+- [STIG hardening considerations](https://docs.poolside.ai/deployment/on-prem/stig.md): Considerations for deploying Poolside on-premises model inference on STIG-hardened systems, including known compatibility issues and recommended configurations.
+- [Storage requirements](https://docs.poolside.ai/deployment/on-prem/storage.md): Storage guidance for Poolside on-premises model deployments, including partitioning recommendations and model checkpoint storage.
+- [Upgrade on-premises](https://docs.poolside.ai/deployment/on-prem/upgrade.md): Upgrade an on-premises Poolside model inference deployment to a new installation bundle.
+- [Supported configurations](https://docs.poolside.ai/deployment/supported-configurations.md): Review supported environments and minimum requirements for Poolside model inference.
+- [System checks](https://docs.poolside.ai/deployment/system-checks.md): Use dive to validate infrastructure readiness before and after deploying the Poolside inference stack, and to check GPU node configuration.
+- [Log in to Poolside](https://docs.poolside.ai/get-started/log-in.md): Choose an authentication option and start using Poolside models.
+- [Poolside overview](https://docs.poolside.ai/get-started/overview.md): Poolside provides agentic coding models, self-managed inference, APIs, and agent workflows for secure software engineering.
+- [Quickstart](https://docs.poolside.ai/get-started/quickstart.md): Install Poolside Agent CLI, log in, and run your first agent task.
+- [Supported models](https://docs.poolside.ai/get-started/supported-models.md): Compare supported Poolside models by intended use, context window, modes, and deployment considerations.
+- [Poolside Documentation](https://docs.poolside.ai/index.md): Build with Poolside agentic coding models in your terminal, editor, tools, or applications.
+- [Acceptable Use Policy](https://docs.poolside.ai/legal/acceptable-use-policy.md)
+- [Data Processing Agreement](https://docs.poolside.ai/legal/data-processing-agreement.md)
+- [End User License Agreement](https://docs.poolside.ai/legal/end-user-license-agreement.md)
+- [Privacy Policy](https://docs.poolside.ai/legal/privacy-policy.md)
+- [Trust Center](https://docs.poolside.ai/legal/trust-center.md): Security, compliance, and privacy information is available in the Poolside Trust Center.
+- [MCP servers](https://docs.poolside.ai/mcp-servers.md): Configure personal MCP servers that Poolside agents can invoke from the CLI.
+- [Inference metrics](https://docs.poolside.ai/metrics/inference-metrics.md): Reference for the Prometheus metrics the Poolside vLLM model server exposes, and how to scrape them.
+- [Permissions](https://docs.poolside.ai/permissions.md): Control what Poolside agents can read, write, and run by using settings.yaml.
+- [Poolside Inference release notes](https://docs.poolside.ai/release-notes/inference.md): Release notes for Poolside Inference deployment and runtime updates.
+- [Model release notes](https://docs.poolside.ai/release-notes/models.md): Release notes for Poolside model releases.
+- [Release notes](https://docs.poolside.ai/release-notes/overview.md): Recent Poolside inference deployment and model releases.
+- [Example prompts](https://docs.poolside.ai/resources/example-prompts.md): Common development tasks and example prompts you can use with Poolside.
+- [Example workflows](https://docs.poolside.ai/resources/example-workflows.md): Common tasks you can accomplish with Poolside Agent CLI.
+- [How agents work](https://docs.poolside.ai/resources/how-agents-work.md): A conceptual overview of agents powered by large language models, including their core components, behavior, and common use cases.
+- [Resources](https://docs.poolside.ai/resources/overview.md): Find conceptual guides, task-focused how-tos, example prompts, and use cases for working with Poolside.
+- [Prompting best practices](https://docs.poolside.ai/resources/prompting-best-practices.md): Learn how to write effective prompts to get the most out of Poolside.
+- [How to run a Poolside coding agent locally](https://docs.poolside.ai/resources/run-model-locally.md): Run a Poolside coding agent with an open-weight model on your own hardware.
+- [Documenting code](https://docs.poolside.ai/resources/use-cases/documenting-code.md): This use case demonstrates how to use Poolside to generate, improve, and maintain code documentation. This can be especially useful when interacting with legacy codebases and understanding how existing codebases work.
+- [Refactoring code](https://docs.poolside.ai/resources/use-cases/refactoring-code.md): This use case demonstrates how to use Poolside to refactor code by understanding existing implementations and suggesting improvements while maintaining functionality.
+- [Visualizing data flows](https://docs.poolside.ai/resources/use-cases/visualizing-data-flows.md): This use case demonstrates how to use Poolside to generate visual representations of code structures, workflows, and architectures using Mermaid diagrams.
+- [Videos](https://docs.poolside.ai/resources/videos.md): Learn how to use Poolside with demos and walkthroughs.
+- [Sandboxes](https://docs.poolside.ai/sandboxes.md): Run Poolside agents in local sandbox environments with file system and network controls.
+- [Secrets](https://docs.poolside.ai/secrets.md): Store sensitive values like API keys and tokens that agents can use without exposing the raw value.
+- [Settings file reference](https://docs.poolside.ai/settings-file-reference.md): Reference for settings you can define in Poolside `settings.yaml` files.
+- [Skills](https://docs.poolside.ai/skills.md): Use local skills to give agents reusable, task-specific instructions and resources.
+- [Support Overview](https://docs.poolside.ai/support/overview.md): Overview of Poolside support offerings, eligibility requirements, and options for non-standard deployments
+- [Premium Support](https://docs.poolside.ai/support/premium-support.md): Learn about Poolside Premium Support, response times, and scope.
+- [Standard Support](https://docs.poolside.ai/support/standard-support.md): Learn about Poolside Standard Support, response times, and more.
+- [Submit a Support Request](https://docs.poolside.ai/support/submit-a-support-request.md): How to open a support request through the Poolside support portal, set the right metadata, and write requests that get resolved faster.
+- [Support Portal](https://docs.poolside.ai/support/support-portal.md)
+- [Tool integrations](https://docs.poolside.ai/tools.md): Use Poolside with editors, desktop apps, coding agents, and local model runtimes.
+- [Use Poolside models in Cline](https://docs.poolside.ai/tools/cline.md): Configure Cline to use Poolside models through Poolside Platform or OpenRouter.
+- [Use Poolside models in GitHub Copilot](https://docs.poolside.ai/tools/copilot.md): Configure GitHub Copilot in VS Code to use Poolside models through OpenRouter.
+- [Use Poolside models in Goose](https://docs.poolside.ai/tools/goose.md): Configure Goose to use Poolside models through Poolside Platform, a Poolside deployment, or OpenRouter.
+- [Use Poolside models in Hermes](https://docs.poolside.ai/tools/hermes.md): Configure Hermes to use Poolside models through OpenRouter.
+- [Use Poolside in JetBrains](https://docs.poolside.ai/tools/jetbrains.md): Configure JetBrains IDEs to use Poolside through Agent Client Protocol.
+- [Use Poolside models in Kilo Code](https://docs.poolside.ai/tools/kilo-code.md): Configure Kilo Code to use Poolside models through Kilo Gateway, the Poolside Platform OpenAI-compatible endpoint, or OpenRouter.
+- [Use Poolside in Neovim with CodeCompanion](https://docs.poolside.ai/tools/neovim.md): Configure Neovim with CodeCompanion to use Poolside through Agent Client Protocol.
+- [Use Poolside with Ollama](https://docs.poolside.ai/tools/ollama.md): Run Poolside Agent CLI with models served by Ollama.
+- [Use Poolside models in OpenCode](https://docs.poolside.ai/tools/opencode.md): Configure OpenCode to use Poolside models through Poolside Platform, a Poolside deployment, or OpenRouter.
+- [Use Poolside in another ACP-compatible editor](https://docs.poolside.ai/tools/other-acp.md): Configure any ACP-compatible editor to use Poolside through Agent Client Protocol.
+- [Use Poolside in Zed](https://docs.poolside.ai/tools/zed.md): Configure Zed to use Poolside through Agent Client Protocol.
+- [Use Poolside where you work](https://docs.poolside.ai/use-poolside.md): Use Poolside models in your development workflow.
+- [Web search and fetch](https://docs.poolside.ai/web-search-and-fetch.md): Let Poolside agents search the web and read pages with the built-in `web_search` and `web_fetch` tools.

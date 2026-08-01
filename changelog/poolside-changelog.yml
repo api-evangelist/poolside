@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/release-notes/overview
+description: >-
+  Recent poolside model and inference-deployment releases. poolside maintains
+  separate model and inference release-note streams.
+scheme: named model + dated inference bundles
+streams:
+  models: https://docs.poolside.ai/release-notes/models
+  inference: https://docs.poolside.ai/release-notes/inference
+current_models: [Laguna XS 2.1, Laguna M.1, Laguna XS.2]
+entries:
+- date: '2026-07'
+  stream: inference
+  version: pool CLI v1.0.8 / July 2026 bundle
+  highlights: >-
+    Cloud and on-premises model inference deployment bundle with the atlas
+    inference server image, SLES 16 support, and pool CLI v1.0.8.
+- date: '2026-06'
+  stream: models
+  version: Laguna XS 2.1
+  highlights: >-
+    Incremental update adding native reasoning support and improved multilingual
+    coding and terminal-style task performance; 256K context window (33B, on-device).
+- date: '2026-04'
+  stream: models
+  version: Laguna M.1
+  highlights: >-
+    225B model for sophisticated coding workflows; 256K context window; improves
+    reference benchmark results over Malibu 2.2.
+- date: '2026-04'
+  stream: models
+  version: Laguna XS.2
+  highlights: Optimized for constrained hardware; faster agentic coding; 256K context window.
+- date: '2025'
+  stream: models
+  version: Malibu 2.2
+  highlights: Agentic coding workflows with multi-turn tool use.
+- date: '2025'
+  stream: models
+  version: Malibu 2.1
+  highlights: Code editing, instruction following, .poolside instruction support, long-context, agent tool calling.

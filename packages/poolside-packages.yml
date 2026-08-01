@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.poolside.ai/cli/install
+description: >-
+  First-party poolside client tooling. poolside distributes the `pool` Agent CLI
+  as a standalone binary via an install script (not published to npm/PyPI/Homebrew
+  as of this pass). The inference API is OpenAI-compatible, so poolside documents
+  using the standard OpenAI SDKs (Python, TypeScript) and the OpenRouter SDK
+  against its base URL rather than shipping its own language SDKs.
+packages:
+- language: shell
+  registry: direct
+  name: pool
+  url: https://downloads.poolside.ai/pool/install.sh
+  install: "curl -fsSL https://downloads.poolside.ai/pool/install.sh | sh"
+  official: true
+  note: poolside Agent CLI standalone binary (macOS, Linux, Windows beta). See cli/poolside-cli.yml.
+client_libraries_note: >-
+  poolside does not publish first-party language SDKs; because the API is
+  OpenAI-compatible, the official OpenAI SDKs and the OpenRouter SDK are the
+  documented client libraries (switch base URL + API key).
+documented_third_party_sdks:
+- name: OpenAI SDK (Python)
+  install: pip install openai
+  official: false
+- name: OpenAI SDK (TypeScript)
+  install: npm install openai
+  official: false

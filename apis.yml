@@ -1,9 +1,31 @@
 aid: poolside
 name: poolside
-description: 'poolside is a company surfaced as a portfolio company of softbank-vision-fund and added
-  to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  poolside builds open-weight foundation models and the systems that refine them
+  for agentic software engineering. Its Laguna model family (Laguna XS 2.1, a 33B
+  on-device model, and Laguna M.1, a 225B model with a 256K context window) is
+  served through an OpenAI-compatible inference API at inference.poolside.ai, the
+  hosted Poolside Platform, OpenRouter, and self-managed on-premises / cloud
+  Kubernetes deployments (Amazon EKS, OpenShift, upstream Kubernetes). Developers
+  work with the models through the `pool` Agent CLI, editor and coding-agent
+  integrations (VS Code, JetBrains, Neovim, Zed, Cline, Goose, GitHub Copilot),
+  the Agent Client Protocol, MCP servers, and reusable Skills / AGENTS.md
+  instructions. poolside targets secure, self-hosted enterprise and government
+  software engineering and is backed by SoftBank Vision Fund.
 url: https://raw.githubusercontent.com/api-evangelist/poolside/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://poolside.ai/og/og-home.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,13 +34,110 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Enterprise
-apis: []
+- Artificial Intelligence
+- Machine Learning
+- Foundation Models
+- Coding Assistant
+- Developer Tools
+- LLM
+- Agents
+- Code Generation
+- Inference
+- OpenAI Compatible
+apis:
+- name: Poolside API
+  description: >-
+    OpenAI-compatible inference API for poolside's Laguna agentic-coding models.
+    Send chat-completion and model-listing requests from your own tools, scripts,
+    and applications using the OpenAI SDK by switching the base URL and API key.
+  humanURL: https://docs.poolside.ai/api/overview
+  baseURL: https://inference.poolside.ai/v1
+  tags:
+  - Inference
+  - LLM
+  - OpenAI Compatible
+  - Chat Completions
+  properties:
+  - type: Documentation
+    url: https://docs.poolside.ai/api/overview
+  - type: APIReference
+    url: https://docs.poolside.ai/api/openai-api-examples
+  - type: Authentication
+    url: authentication/poolside-authentication.yml
+  - type: Conventions
+    url: conventions/poolside-conventions.yml
+  - type: Conformance
+    url: conformance/poolside-conformance.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://platform.poolside.ai
+- type: Documentation
+  url: https://docs.poolside.ai
+- type: APIReference
+  url: https://docs.poolside.ai/api/openai-api-examples
+- type: GettingStarted
+  url: https://docs.poolside.ai/get-started/quickstart
+- type: Quickstart
+  url: https://docs.poolside.ai/get-started/quickstart
+- type: SignUp
+  url: https://platform.poolside.ai
+- type: Login
+  url: https://docs.poolside.ai/get-started/log-in
+- type: Support
+  url: https://docs.poolside.ai/support/overview
+- type: Blog
+  url: https://poolside.ai/blog
+- type: TermsOfService
+  url: https://docs.poolside.ai/legal/end-user-license-agreement
+- type: PrivacyPolicy
+  url: https://docs.poolside.ai/legal/privacy-policy
+- type: TrustCenter
+  url: https://trust.poolside.ai/
+- type: ChangeLog
+  url: https://docs.poolside.ai/release-notes/overview
+- type: LLMsTxt
+  url: llms/poolside-llms.txt
+- type: WellKnown
+  url: well-known/poolside-well-known.yml
+- type: SecurityTxt
+  url: well-known/poolside-security.txt
+- type: Security
+  url: https://poolside.ai/.well-known/security.txt
+- type: VulnerabilityDisclosure
+  url: security/poolside-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/poolside-domain-security.yml
+- type: Authentication
+  url: authentication/poolside-authentication.yml
+- type: Conventions
+  url: conventions/poolside-conventions.yml
+- type: Conformance
+  url: conformance/poolside-conformance.yml
+- type: Lifecycle
+  url: lifecycle/poolside-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/poolside-lifecycle.yml
+- type: CLI
+  url: cli/poolside-cli.yml
+- type: Packages
+  url: packages/poolside-packages.yml
+- type: ChangeLog
+  url: changelog/poolside-changelog.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ErrorCatalog
+  url: errors/poolside-problem-types.yml
