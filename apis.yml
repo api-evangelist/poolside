@@ -39,6 +39,19 @@ tags:
 - Company
 - Enterprise
 - Artificial Intelligence
+- Machine-Learning
+- Foundation Models
+- Coding Assistant
+- Developer Tools
+- LLM
+- Agents
+- Code Generation
+- Inference
+- OpenAI-Compatible
+tags_raw:
+- Company
+- Enterprise
+- Artificial Intelligence
 - Machine Learning
 - Foundation Models
 - Coding Assistant
@@ -57,6 +70,11 @@ apis:
   humanURL: https://docs.poolside.ai/api/overview
   baseURL: https://inference.poolside.ai/v1
   tags:
+  - Inference
+  - LLM
+  - OpenAI-Compatible
+  - Chat Completions
+  tags_raw:
   - Inference
   - LLM
   - OpenAI Compatible
